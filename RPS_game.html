@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Title</title>
+</head>
+
+<body>
+  <script>
+const choice = ['Rock', 'Paper', 'Scissors'];
+let outcome;
+let outcometext;
+const playerScore = 0;
+const computerScore = 0;
+
+  
+function computerPlay(choice) {
+      return choice[Math.floor(Math.random() * choice.length)];
+    }
+
+    function playRound() {
+      if (playerSelection + computerSelection == 'PaperRock' || playerSelection + computerSelection == 'RockScissors' || playerSelection + computerSelection == 'ScissorsPaper') {
+        outcome = 'win';
+        outcometext = "You win " + playerSelection + " beats " + computerSelection;
+        return playerScore++;
+      } else if (playerSelection + computerSelection == 'PaperScissors' || playerSelection + computerSelection == 'RockPaper' || playerSelection + computerSelection == 'ScissorsRock') {
+        outcome = 'lose';
+        outcometext = "You lose " + computerSelection + " beats " + playerSelection;
+        return computerScore++;
+      } else {
+        outcome = 'tie';
+        outcometext = playerSelection + " ties " + computerSelection;
+      }
+          }
+    
+                
+    
+    
+    const playerPrompt = prompt("Paper, Scissors, or Rock");
+    const playerSelection = playerPrompt[0].toUpperCase() + playerPrompt.slice(1).toLowerCase();
+    const computerSelection = computerPlay(choice);
+    alert(playRound(playerSelection, computerSelection));
+</script>
+</body>
+</html>
