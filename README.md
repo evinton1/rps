@@ -1,2 +1,1 @@
-# rps
-Rock Paper Scissors game
+This is the code for the first step of the Odin Project. 5 rounds then declares a winner.
