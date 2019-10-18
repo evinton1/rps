@@ -3,37 +3,7 @@
 <head>
   <title>Page Title</title>
 </head>
-
 <body>
-  <script>
-let choice = ['Rock', 'Paper', 'Scissors'];
-let outcome;
-let outcometext;
-let playerScore = 0;
-let computerScore = 0;
-  
-function computerPlay(choice) {
-      return choice[Math.floor(Math.random() * choice.length)];
-    }
-
-function playRound() {
-      if (playerSelection + computerSelection == 'PaperRock' || playerSelection + computerSelection == 'RockScissors' || playerSelection + computerSelection == 'ScissorsPaper') {
-        outcome = 'win';
-        outcometext = "You win " + playerSelection + " beats " + computerSelection;
-        return playerScore++;
-      } else if (playerSelection + computerSelection == 'PaperScissors' || playerSelection + computerSelection == 'RockPaper' || playerSelection + computerSelection == 'ScissorsRock') {
-        outcome = 'lose';
-        outcometext = "You lose " + computerSelection + " beats " + playerSelection;
-        return computerScore++;
-      } else {
-        outcome = 'tie';
-        outcometext = playerSelection + " ties " + computerSelection;
-      }
-   }        
-    let playerPrompt = prompt("Paper, Scissors, or Rock");
-    let playerSelection = playerPrompt[0].toUpperCase() + playerPrompt.slice(1).toLowerCase();
-    let computerSelection = computerPlay(choice);
-    alert(playRound(playerSelection, computerSelection));
-</script>
+  <script src="RPS_game.js"></script>
 </body>
 </html>
